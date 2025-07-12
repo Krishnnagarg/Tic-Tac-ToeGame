@@ -18,7 +18,6 @@ const winPatterns = [
 
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
-        console.log("box was clicked");
         if (turnO) {
             box.innerText = "O";
             turnO = false;
@@ -65,7 +64,6 @@ let checkWin = () => {
 
         if (pos1val != "" && pos2val != "" && pos3val != "") {
             if (pos1val === pos2val && pos2val === pos3val) {
-                console.log("Winner", pos1val);
                 showWinner(pos1val);
             }
         }
